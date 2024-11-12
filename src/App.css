@@ -1,23 +1,13 @@
-/* reset */
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
-/* 
-121212
-1F1B24
-282828
-3C3C3C
-FF6F61
-*/
 :root{
   --primary: #121212;
   --secondary: #282828;
   --secondary-text: #459;
-  /* --accent-color: #FF6F61; */
   --accent-color: #459;
   
   --font: Arial, sans-serif;
@@ -44,61 +34,17 @@ header{
 }
 
 footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
   background: var(--secondary);
 }
 
 main{
   margin-top: 4rem;
-  .card{
-    background: var(--secondary);
-    margin-bottom: 2rem;
-    border-radius: var(--card-br-radius);
-    
-    img{
-      border-top-left-radius: var(--card-br-radius);
-      border-top-right-radius: var(--card-br-radius);
-    }
-  }
-  .card-body{
-      padding: 1rem;
-      padding-bottom: 2rem;
-
-      .card-title{
-        color: var(--secondary-text);
-        font-weight: 500;
-      }
-      
-      .card-text{
-        margin: 1rem 0;
-        margin-bottom: 2rem;
-      }
-
-      a{
-        color: var(--text-color);
-        text-decoration: none;
-        background-color: var(--accent-color);
-        padding: 0.5rem 1.5rem;
-        border-radius: 999px;
-        border: 1px solid var(--accent-color);
-        
-        &:hover{
-          color: var(--accent-color);
-          background: var(--text-color);
-          border: 1px solid var(--accent-color);
-
-          transition-duration: 0.5s;
-        }
-      }
-    }
-  }
+  margin-bottom: 4rem;
+}
   
   
-  .container{
-    max-width: 1300px;
+.container{
+  max-width: 1300px;
   width: var(--img-size);
   margin: auto;
 }
