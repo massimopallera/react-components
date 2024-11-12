@@ -15,9 +15,10 @@ FF6F61
 */
 :root{
   --primary: #121212;
-  --secondary: #1F1B24;
-  --secondary-text: #282828;
-  --accent-color: #FF6F61;
+  --secondary: #282828;
+  --secondary-text: #459;
+  /* --accent-color: #FF6F61; */
+  --accent-color: #459;
   
   --font: Arial, sans-serif;
   --text-color: white;
@@ -33,13 +34,27 @@ body{
 }
 
 header, footer {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
+header{
+  color: var(--secondary-text);
+  background: var(--secondary);
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  background: var(--secondary);
+}
+
 main{
+  margin-top: 4rem;
   .card{
-    background: var(--secondary-text);
+    background: var(--secondary);
     margin-bottom: 2rem;
     border-radius: var(--card-br-radius);
     
@@ -50,23 +65,42 @@ main{
   }
   .card-body{
       padding: 1rem;
-      
+      padding-bottom: 2rem;
+
       .card-title{
+        color: var(--secondary-text);
         font-weight: 500;
       }
       
       .card-text{
         margin: 1rem 0;
+        margin-bottom: 2rem;
+      }
+
+      a{
+        color: var(--text-color);
+        text-decoration: none;
+        background-color: var(--accent-color);
+        padding: 0.5rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--accent-color);
+        
+        &:hover{
+          color: var(--accent-color);
+          background: var(--text-color);
+          border: 1px solid var(--accent-color);
+
+          transition-duration: 0.5s;
+        }
       }
     }
   }
   
   
   .container{
+    max-width: 1300px;
   width: var(--img-size);
   margin: auto;
-  /* background: var(--secondary); */
-  /* padding: 2rem; */
 }
 
 .row{
